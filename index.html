@@ -1,36 +1,95 @@
 <!-- TODO 1: Create the HTML Boilerplate -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-</head>
-<body>
-    <h1>Hubert's portfolio</h1>
-    <h2>I'm a Web Developer</h2>
-    <hr />
-    
-
-<!-- TODO 2: Add Your previous projects' HTML into the public folder -->
-
-<!-- TODO 3: Take screenshots of your project previews and add the images to the images folder -->
-
-<!-- TODO 4: Add titles/subtitles etc. -->
-
-<!-- TODO 5: Add a link to the project pages -->
-<a href="./public/movie-ranking.html">Movie Ranking Project</a>
-<img src="./assets/images/movie-ranking.png" height="200"/>
-<br />
-<a href="./public/birthday-invite.html">Birthday Invite Project</a>
-<img src="./assets/images/birthday-invite.png" height="200" alt="birthday-invite page preview">
-<!-- TODO 6: Add images to show the project previews
-HINT for TODO 6: You can use the height attribute set to 200 to make the image smaller:
-https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-height -->
-
-<!-- TODO 7: Add the Contact Me and About Me page links -->
-<hr />
-<a href="./public/about.html">About Me</a>   
-<a href="./public/contact.html">Contact me</a>
-</body>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="maincontainer">
+      <div class="main-card">
+        <img
+          class="mainimg"
+          src="./assets/images/logotype2.jfif"
+          alt="logotype of Ertski"
+        />
+      </div>
+    </div>
+    <div class="grid-container">
+      <div class="first card">
+        <a href="./public/about.html">About Me</a>
+        <a href="./public/contact.html">Contact me</a>
+      </div>
+      <div class="card">
+        <a href="./public/movie-ranking.html">
+          <img src="./assets/images/preview.jfif"
+        /></a>
+        <p>
+          Now that there is the Tec-9, a crappy spray gun from South Miami. This
+          gun is advertised as the most popular gun in American crime. Do you
+          believe that shit? It actually says that in the little book that comes
+          with it: the most popular gun in American crime. Like they're actually
+          proud of that shit.
+        </p>
+      </div>
+      <div class="card">
+        <!-- <a href="./public/birthday-invite.html">Birthday Invite Project</a> -->
+        <a href="./public/movie-ranking.html">
+          <img src="./assets/images/preview2.jfif"
+        /></a>
+        <p>
+          My money's in that office, right? If she start giving me some bullshit
+          about it ain't there, and we got to go someplace else and get it, I'm
+          gonna shoot you in the head then and there. Then I'm gonna shoot that
+          bitch in the kneecaps, find out where my goddamn money is. She gonna
+          tell me too. Hey, look at me when I'm talking to you, motherfucker.
+          You listen: we go in there, and that nigga Winston or anybody else is
+          in there, you the first motherfucker to get shot. You understand?
+        </p>
+      </div>
+      <div class="card">
+        <!-- <a href="./public/birthday-invite.html">Birthday Invite Project</a> -->
+        <a href="./public/movie-ranking.html">
+          <img src="./assets/images/preview3.jfif"
+        /></a>
+        <p>
+          Now that we know who you are, I know who I am. I'm not a mistake! It
+          all makes sense! In a comic, you know how you can tell who the
+          arch-villain's going to be? He's the exact opposite of the hero. And
+          most times they're friends, like you and me! I should've known way
+          back when... You know why, David? Because of the kids. They called me
+          Mr Glass.
+        </p>
+      </div>
+      <div class="card">
+        <!-- <a href="./public/birthday-invite.html">Birthday Invite Project</a> -->
+        <a href="./public/movie-ranking.html">
+          <img src="./assets/images/preview4.jfif"
+        /></a>
+        <p>
+          Well, the way they make shows is, they make one show. That show's
+          called a pilot. Then they show that show to the people who make shows,
+          and on the strength of that one show they decide if they're going to
+          make more shows. Some pilots get picked and become television
+          programs. Some don't, become nothing. She starred in one of the ones
+          that became nothing.
+        </p>
+      </div>
+    </div>
+    <footer>
+      <p>
+        Create. Develop. Design.
+        <br />
+        All rights reserved.
+      </p>
+    </footer>
+  </body>
 </html>
