@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Case: Rejstracja użytkownika na x.com/Twitter/com</title>
+  </head>
+
+  <body>
+    <h1>Test case: Rejstracja użytkownika na x.com/Twitter/com</h1>
+
+    <ol>
+      <li>
+        <b>Kroki:</b>
+        <ol>
+          <li>Wybranie opcji Utwórz Konto.</li>
+          <li>Poprawne uzupełnienie pola Imię.</li>
+          <li>Podanie adresu e-mail w prawidłowym formacie.</li>
+          <li>Podanie daty urodzenia.</li>
+          <li>Przejście dalej używając przycisku "Dalej".</li>
+          <li>
+            Dostosowanie platformy do swoich potrzeb, zaznaczenie
+            odpowiadających checkboxów i zatwierdzenie przyciskiem "Dalej".
+          </li>
+          <li>
+            Potwierdzenie uzupełnionych wcześniej danych i zatwierdzenie
+            przyciskiem "Zarejestruj się".
+          </li>
+          <li>
+            Uwierzytelnienie konta uzupełniając trzykrotnie Captchę/zadanie
+            uwierzytelniające.
+          </li>
+          <li>
+            Podanie kodu weryfikacji otrzymanego na wcześniej podany adres
+            e-mail i zatwierdzenie przyciskiem "Dalej".
+          </li>
+        </ol>
+      </li>
+      <li>
+        <b>Oczekiwany rezultat:</b>
+        <ul>
+          <li>Użytkownik poprawnie zarejestrował swoje konto.</li>
+        </ul>
+      </li>
+    </ol>
+
+    <ol>
+      <li>
+        <b>Failure cases:</b>
+        <ol>
+          <li>
+            <b>Próba rejestracji bez podania imienia.</b>
+            <ul>
+              <li>
+                <b>Kroki:</b>
+                <ol>
+                  <li>Wybranie opcji Utwórz Konto.</li>
+                  <li>Pominięcie pola Imię.</li>
+                </ol>
+              </li>
+              <li>
+                <b>Oczekiwany rezultat:</b>
+                <ul>
+                  <li>
+                    Przycisk "Dalej" jest nieaktywny, uniemożliwia kontynuację
+                    bez podania pełnych danych.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <b>Próba rejestracji z adresem e-mail w złym formacie</b>
+            <ul>
+              <li>
+                <b>Kroki:</b>
+                <ol>
+                  <li>Wybranie opcji Utwórz Konto.</li>
+                  <li>Poprawne uzupełnienie pola Imię.</li>
+                  <li>Podanie adresu e-mail w błędnym formacie.</li>
+                </ol>
+              </li>
+              <li>
+                <b>Oczekiwany rezultat:</b>
+                <ul>
+                  <li>
+                    Pole "E-mail" zgłasza błąd, prosząc o podanie adresu e-mail
+                    w prawidłowym formacie. Przycisk "Dalej" jest nieaktywny,
+                    uniemożliwia kontynuację.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <b>Próba rejestracji z wykorzystanym adresem e-mail</b>
+            <ul>
+              <li>
+                <b>Kroki:</b>
+                <ol>
+                  <li>Wybranie opcji Utwórz Konto.</li>
+                  <li>Poprawne uzupełnienie pola Imię.</li>
+                  <li>
+                    Podanie zarejestrowanego już adresu e-mail w prawidłowym
+                    formacie.
+                  </li>
+                </ol>
+              </li>
+              <li>
+                <b>Oczekiwany rezultat:</b>
+                <ul>
+                  <li>
+                    Pole "E-mail" zgłasza błąd, informujący o przypisaniu adresu
+                    e-mail do innego konta. Przycisk "Dalej" jest nieaktywny,
+                    uniemożliwia kontynuację.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <b>Próba rejestracji z polem "Data urodzenia" bez danych</b>
+            <ul>
+              <li>
+                <b>Kroki:</b>
+                <ol>
+                  <li>Wybranie opcji Utwórz Konto.</li>
+                  <li>Poprawne uzupełnienie pola Imię.</li>
+                  <li>Podanie adresu e-mail w prawidłowym formacie.</li>
+                  <li>Pozostawienie pola "Data urodzenia" bez danych.</li>
+                </ol>
+              </li>
+              <li>
+                <b>Oczekiwany rezultat:</b>
+                <ul>
+                  <li>
+                    Przycisk "Dalej" jest nieaktywny, uniemożliwia kontynuację
+                    bez podania pełnych danych.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <b
+              >Próba rejestracji z polem "Data urodzenia" w prawidłowym
+              formacie</b
+            >
+            <ul>
+              <li>
+                <b>Kroki:</b>
+                <ol>
+                  <li>Wybranie opcji Utwórz Konto.</li>
+                  <li>Poprawne uzupełnienie pola Imię.</li>
+                  <li>Podanie adresu e-mail w prawidłowym formacie.</li>
+                  <li>Podanie daty urodzenia.</li>
+                  <li>Przejście dalej używając przycisku "Dalej".</li>
+                  <li>
+                    Dostosowanie platformy do swoich potrzeb, zaznaczenie
+                    odpowiadających checkboxów i zatwierdzenie przyciskiem
+                    "Dalej".
+                  </li>
+                  <li>
+                    Potwierdzenie uzupełnionych wcześniej danych i zatwierdzenie
+                    przyciskiem "Zarejestruj się".
+                  </li>
+                  <li>
+                    Uwierzytelnienie konta uzupełniając trzykrotnie
+                    Captchę/zadanie uwierzytelniające.
+                  </li>
+                  <li>
+                    Niepoprawne uzupełnienie przynajmniej jednej z trzech prób
+                    uwierzytelniania.
+                  </li>
+                </ol>
+              </li>
+              <li>
+                <b>Oczekiwany rezultat:</b>
+                <ul>
+                  <li>
+                    Użytkownik zostaje poinformowany o błędnym uzupełnieniu
+                    uwierzytelniania, po naciśnięciu "Spróbuj ponownie" lub
+                    "Uruchom ponownie" otrzyma możliwość ponownego
+                    uwierzytelniania - ponownie punkt 9.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <b>Kroki:</b>
+                <ol>
+                  <li>Wybranie opcji Utwórz Konto.</li>
+                  <li>Poprawne uzupełnienie pola Imię.</li>
+                  <li>Podanie adresu e-mail w prawidłowym formacie.</li>
+                  <li>Podanie daty urodzenia.</li>
+                  <li>Przejście dalej używając przycisku "Dalej".</li>
+                  <li>
+                    Dostosowanie platformy do swoich potrzeb, zaznaczenie
+                    odpowiadających checkboxów i zatwierdzenie przyciskiem
+                    "Dalej".
+                  </li>
+                  <li>
+                    Potwierdzenie uzupełnionych wcześniej danych i zatwierdzenie
+                    przyciskiem "Zarejestruj się".
+                  </li>
+                  <li>
+                    Uwierzytelnienie konta uzupełniając trzykrotnie
+                    Captchę/zadanie uwierzytelniające.
+                  </li>
+                  <li>Uwierzytelnienie konta uzupełniając Captchę.</li>
+                  <li>Nieuzupełnienie pola "Kod weryfikacji".</li>
+                </ol>
+              </li>
+              <li>
+                <b>Oczekiwany rezultat:</b>
+                <ul>
+                  <li>
+                    Przycisk "Dalej" jest nieaktywny, uniemożliwia kontynuację
+                    bez podania pełnych danych.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <b>Kroki:</b>
+                <ol>
+                  <li>Wybranie opcji Utwórz Konto.</li>
+                  <li>Poprawne uzupełnienie pola Imię.</li>
+                  <li>Podanie adresu e-mail w prawidłowym formacie.</li>
+                  <li>Podanie daty urodzenia.</li>
+                  <li>Przejście dalej używając przycisku "Dalej".</li>
+                  <li>
+                    Dostosowanie platformy do swoich potrzeb, zaznaczenie
+                    odpowiadających checkboxów i zatwierdzenie przyciskiem
+                    "Dalej".
+                  </li>
+                  <li>
+                    Potwierdzenie uzupełnionych wcześniej danych i zatwierdzenie
+                    przyciskiem "Zarejestruj się".
+                  </li>
+                  <li>
+                    Uwierzytelnienie konta uzupełniając trzykrotnie
+                    Captchę/zadanie uwierzytelniające.
+                  </li>
+                  <li>Uwierzytelnienie konta uzupełniając Captchę.</li>
+                  <li>
+                    Niepoprawne uzupełnienie przynajmniej jednej z trzech prób
+                    uwierzytelniania.
+                  </li>
+                </ol>
+              </li>
+              <li>
+                <b>Oczekiwany rezultat:</b>
+                <ul>
+                  <li>
+                    Użytkownik zostaje poinformowany o błędnym uzupełnieniu
+                    uwierzytelniania, po naciśnięciu "Spróbuj ponownie" lub
+                    "Uruchom ponownie" otrzyma możliwość ponownego
+                    uwierzytelniania - ponownie punkt 9.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <b>Kroki:</b>
+                <ol>
+                  <li>
+                    Użycie opcji "X" w lewym górnym rogu okienka rejestracji w
+                    dowolnym jej momencie.
+                  </li>
+                </ol>
+              </li>
+              <li>
+                <b>Oczekiwany rezultat:</b>
+                <ul>
+                  <li>
+                    Okno rejestracji zamyka się, usuwając uprzednio wprowadzone
+                    dane.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </body>
+</html>

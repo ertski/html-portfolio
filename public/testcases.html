@@ -1,131 +1,181 @@
-<p>
 <h1>Test case: Rejstracja użytkownika na x.com/Twitter/com</h1>
-<br />
+<ol>
+  <li>
+    <b>Kroki:</b>
+    <ol>
+      <li>Wybranie opcji Utwórz Konto.</li>
+      <li>Poprawne uzupełnienie pola Imię.</li>
+      <li>Podanie adresu e-mail w prawidłowym formacie.</li>
+      <li>Podanie daty urodzenia.</li>
+      <li>Przejście dalej używając przycisku "Dalej".</li>
+      <li>
+        Dostosowanie platformy do swoich potrzeb, zaznaczenie odpowiadających
+        checkboxów i zatwierdzenie przyciskiem "Dalej".
+      </li>
+      <li>
+        Potwierdzenie uzupełnionych wcześniej danych i zatwierdzenie przyciskiem
+        "Zarejestruj się".
+      </li>
+      <li>
+        Uwierzytelnienie konta uzupełniając trzykrotnie Captchę/zadanie
+        uwierzytelniające.
+      </li>
+      <li>
+        Podanie kodu weryfikacji otrzymanego na wcześniej podany adres e-mail i
+        zatwierdzenie przyciskiem "Dalej".
+      </li>
+    </ol>
+  </li>
+  <li>
+    <b>Oczekiwany rezultat:</b>
+    <ul>
+      <li>Użytkownik poprawnie zarejestrował swoje konto.</li>
+    </ul>
+  </li>
+</ol>
+<ol>
+  <b>Failure cases:</b>
+  <li>
+    <b>Próba rejestracji bez podania imienia.</b>
+    <br />
+    <ol>
+      <b>Kroki:</b>
+      <li>Wybranie opcji Utwórz Konto.</li>
+      <li>Pominięcie pola Imię.</li>
+      <br />
+    </ol>
+    <b>Oczekiwany rezultat:</b>
+    <ul>
+      <li>
+        Przycisk "Dalej" jest nieaktywny, uniemożliwia kontynuację bez podania
+        pełnych danych.
+      </li>
+    </ul>
+  </li>
+  <br />
+  <li><b>Próba rejestracji z adresem e-mail w złym formacie</b></li>
+  <br />
+  <ol>
+    <b>Kroki:</b>
+    <li>Wybranie opcji Utwórz Konto.</li>
+    <li>Poprawne uzupełnienie pola Imię.</li>
+    <li>Podanie adresu e-mail w błędnym formacie.</li>
+  </ol>
+  <br />
+  <b>Oczekiwany rezultat:</b>
+  <ul>
+    <li>
+      Pole "E-mail" zgłasza błąd, prosząc o podanie adresu e-mail w prawidłowym
+      formacie. Przycisk "Dalej" jest nieaktywny, uniemożliwia kontynuację.
+    </li>
+  </ul>
+  <br />
+  <li><b>Próba rejestracji z wykorzystanym adresem e-mail</b></li>
+  <br />
+  <ol>
+    <b>Kroki:</b>
+    <li>Wybranie opcji Utwórz Konto.</li>
+    <li>Poprawne uzupełnienie pola Imię.</li>
+    <li>Podanie zarejestrowanego już adresu e-mail w prawidłowym formacie.</li>
+    <br />
+    Oczekiwany rezultat:<br />
+    - Pole "E-mail" zgłasza błąd, informujący o przypisaniu adresu e-mail do
+    innego konta. Przycisk "Dalej" jest nieaktywny, uniemożliwia kontynuację.<br />
+    <br />
+    <li>ss</li>
+    Kroki:<br />
 
-Kroki:<br />
-1.Przejście na stronę logowania.<br />
-2.Wybranie opcji Utwórz Konto.<br />
-3.Poprawne uzupełnienie pola Imię.<br />
-4.Podanie adresu e-mail w prawidłowym formacie.<br />
-5.Podanie daty urodzenia.<br />
-6.Przejście dalej używając przycisku "Dalej".<br />
-7.Dostosowanie platformy do swoich potrzeb, zaznaczenie odpowiadających checkboxów i zatwierdzenie przyciskiem "Dalej".<br />
-8.Potwierdzenie uzupełnionych wcześniej danych i zatwierdzenie przyciskiem "Zarejestruj się".<br />
-9.Uwierzytelnienie konta uzupełniając trzykrotnie Captchę/zadanie uwierzytelniające.<br />
-10.Podanie kodu weryfikacji otrzymanego na wcześniej podany adres e-mail i zatwierdzenie przyciskiem "Dalej".<br />
-<br />
-Oczekiwany rezultat:<br />
-- Użytkownik poprawnie zarejestrował swoje konto.<br />
-<br />
-Failure cases:<br />
-<br />
-A.<br />
-Kroki:<br />
-1.Przejście na stronę logowania.<br />
-2.Wybranie opcji Utwórz Konto.<br />
-3.Pominięcie pola Imię. <br />
-<br />
-Oczekiwany rezultat:<br />
-- Przycisk "Dalej" jest nieaktywny, uniemożliwia kontynuację bez podania pełnych danych.<br />
-<br />
-B.<br />
-Kroki:<br />
-1.Przejście na stronę logowania.<br />
-2.Wybranie opcji Utwórz Konto.<br />
-3.Poprawne uzupełnienie pola Imię.<br />
-4.Podanie adresu e-mail w błędnym formacie.<br />
-<br />
-Oczekiwany rezultat:<br />
-- Pole "E-mail" zgłasza błąd, prosząc o podanie adresu e-mail w prawidłowym formacie. Przycisk "Dalej" jest nieaktywny, uniemożliwia kontynuację.<br />
-<br />
-C.<br />
-Kroki:<br />
-1.Przejście na stronę logowania.<br />
-2.Wybranie opcji Utwórz Konto.<br />
-3.Poprawne uzupełnienie pola Imię.<br />
-4.Podanie zarejestrowanego już adresu e-mail w prawidłowym formacie.<br />
-<br />
-Oczekiwany rezultat:<br />
-- Pole "E-mail" zgłasza błąd, informujący o przypisaniu adresu e-mail do innego konta. Przycisk "Dalej" jest nieaktywny, uniemożliwia kontynuację.<br />
-<br />
-D.<br />
-Kroki:<br />
-1.Przejście na stronę logowania.<br />
-2.Wybranie opcji Utwórz Konto.<br />
-3.Poprawne uzupełnienie pola Imię.<br />
-4.Podanie adresu e-mail w prawidłowym formacie.<br />
-5.Pozostawienie pola "Data urodzenia" bez danych.<br />
-<br />
-Oczekiwany rezultat:<br />
-- Przycisk "Dalej" jest nieaktywny, uniemożliwia kontynuację bez podania pełnych danych.<br />
-<br />
-E.<br />
-Kroki:<br />
-1.Przejście na stronę logowania.<br />
-2.Wybranie opcji Utwórz Konto.<br />
-3.Poprawne uzupełnienie pola Imię.<br />
-4.Podanie adresu e-mail w prawidłowym formacie.<br />
-5.Podanie daty urodzenia.<br />
-6.Przejście dalej używając przycisku "Dalej".<br />
-7.Dostosowanie platformy do swoich potrzeb, zaznaczenie odpowiadających checkboxów i zatwierdzenie przyciskiem "Dalej".<br />
-8.Próba poprawienia danych podanych w punktach 3-5.<br />
-<br />
-Oczekiwany rezultat:<br />
-- Użytkownik zostaje przeniesiony do punktu 3. a uzupełnione dane pozostają w swoich polach.<br />
-<br />
-F.<br />
-Kroki:<br />
-1.Przejście na stronę logowania.<br />
-2.Wybranie opcji Utwórz Konto.<br />
-3.Poprawne uzupełnienie pola Imię.<br />
-4.Podanie adresu e-mail w prawidłowym formacie.<br />
-5.Podanie daty urodzenia.<br />
-6.Przejście dalej używając przycisku "Dalej".<br />
-7.Dostosowanie platformy do swoich potrzeb, zaznaczenie odpowiadających checkboxów i zatwierdzenie przyciskiem "Dalej".<br />
-8.Potwierdzenie uzupełnionych wcześniej danych i zatwierdzenie przyciskiem "Zarejestruj się".<br />
-9.Niepoprawne uzupełnienie przynajmniej jednej z trzech prób uwierzytelniania.<br />
-<br />
-Oczekiwany rezultat:<br />
-- Użytkownik zostaje poinformowany o błędnym uzupełnieniu uwierzytelniania, po naciśnięciu "Spróbuj ponownie" lub "Uruchom ponownie" otrzyma możliwość ponownego uwierzytelniania - ponownie punkt 9.<br />
-<br />
-G.<br />
-Kroki:<br />
-1.Przejście na stronę logowania.<br />
-2.Wybranie opcji Utwórz Konto.<br />
-3.Poprawne uzupełnienie pola Imię.<br />
-4.Podanie adresu e-mail w prawidłowym formacie.<br />
-5.Podanie daty urodzenia.<br />
-6.Przejście dalej używając przycisku "Dalej".<br />
-7.Dostosowanie platformy do swoich potrzeb, zaznaczenie odpowiadających checkboxów i zatwierdzenie przyciskiem "Dalej".<br />
-8.Potwierdzenie uzupełnionych wcześniej danych i zatwierdzenie przyciskiem "Zarejestruj się".<br />
-9.Uwierzytelnienie konta uzupełniając Captchę.<br />
-10.Nieuzupełnienie pola "Kod weryfikacji".<br />
-<br />
-Oczekiwany rezultat:<br />
-- Przycisk "Dalej" jest nieaktywny, uniemożliwia kontynuację bez podania pełnych danych.<br />
-<br />
-H.<br />
-Kroki:<br />
-1.Przejście na stronę logowania.<br />
-2.Wybranie opcji Utwórz Konto.<br />
-3.Poprawne uzupełnienie pola Imię.<br />
-4.Podanie adresu e-mail w prawidłowym formacie.<br />
-5.Podanie daty urodzenia.<br />
-6.Przejście dalej używając przycisku "Dalej".<br />
-7.Dostosowanie platformy do swoich potrzeb, zaznaczenie odpowiadających checkboxów i zatwierdzenie przyciskiem "Dalej".<br />
-8.Potwierdzenie uzupełnionych wcześniej danych i zatwierdzenie przyciskiem "Zarejestruj się".<br />
-9.Uwierzytelnienie konta uzupełniając trzykrotnie Captchę/zadanie uwierzytelniające.<br />
-10.Podanie błędnego kodu weryfikacji.<br />
-<br />
-Oczekiwany rezultat:<br />
-- Sprawdzenie kodu, wyświetlenie komunikatu "Wpisany kod jest niepoprawny. Spróbuj ponownie." i powrót do punktu 10, prosząc o podanie kodu weryfikacji.<br />
-<br />
-I.<br />
-Kroki:<br />
-1. Użycie opcji "X" w lewym górnym rogu okienka rejestracji w dowolnym jej momencie.<br />
-<br />
-Oczekiwany rezultat:<br />
-- Okno rejestracji zamyka się, usuwając uprzednio wprowadzone dane.<br />
-<br />
+    2.Wybranie opcji Utwórz Konto.<br />
+    3.Poprawne uzupełnienie pola Imię.<br />
+    4.Podanie adresu e-mail w prawidłowym formacie.<br />
+    5.Pozostawienie pola "Data urodzenia" bez danych.<br />
+    <br />
+    Oczekiwany rezultat:<br />
+    - Przycisk "Dalej" jest nieaktywny, uniemożliwia kontynuację bez podania
+    pełnych danych.<br />
+    <br />
+    <li>dd</li>
+    > Kroki:<br />
 
-</p>
+    2.Wybranie opcji Utwórz Konto.<br />
+    3.Poprawne uzupełnienie pola Imię.<br />
+    4.Podanie adresu e-mail w prawidłowym formacie.<br />
+    5.Podanie daty urodzenia.<br />
+    6.Przejście dalej używając przycisku "Dalej".<br />
+    7.Dostosowanie platformy do swoich potrzeb, zaznaczenie odpowiadających
+    checkboxów i zatwierdzenie przyciskiem "Dalej".<br />
+    8.Próba poprawienia danych podanych w punktach 3-5.<br />
+    <br />
+    Oczekiwany rezultat:<br />
+    - Użytkownik zostaje przeniesiony do punktu 3. a uzupełnione dane pozostają
+    w swoich polach.<br />
+    <br />
+    <li>ss</li>
+    Kroki:<br />
+
+    2.Wybranie opcji Utwórz Konto.<br />
+    3.Poprawne uzupełnienie pola Imię.<br />
+    4.Podanie adresu e-mail w prawidłowym formacie.<br />
+    5.Podanie daty urodzenia.<br />
+    6.Przejście dalej używając przycisku "Dalej".<br />
+    7.Dostosowanie platformy do swoich potrzeb, zaznaczenie odpowiadających
+    checkboxów i zatwierdzenie przyciskiem "Dalej".<br />
+    8.Potwierdzenie uzupełnionych wcześniej danych i zatwierdzenie przyciskiem
+    "Zarejestruj się".<br />
+    9.Niepoprawne uzupełnienie przynajmniej jednej z trzech prób
+    uwierzytelniania.<br />
+    <br />
+    Oczekiwany rezultat:<br />
+    - Użytkownik zostaje poinformowany o błędnym uzupełnieniu uwierzytelniania,
+    po naciśnięciu "Spróbuj ponownie" lub "Uruchom ponownie" otrzyma możliwość
+    ponownego uwierzytelniania - ponownie punkt 9.<br />
+    <br />
+    <li>dds</li>
+    Kroki:<br />
+
+    2.Wybranie opcji Utwórz Konto.<br />
+    3.Poprawne uzupełnienie pola Imię.<br />
+    4.Podanie adresu e-mail w prawidłowym formacie.<br />
+    5.Podanie daty urodzenia.<br />
+    6.Przejście dalej używając przycisku "Dalej".<br />
+    7.Dostosowanie platformy do swoich potrzeb, zaznaczenie odpowiadających
+    checkboxów i zatwierdzenie przyciskiem "Dalej".<br />
+    8.Potwierdzenie uzupełnionych wcześniej danych i zatwierdzenie przyciskiem
+    "Zarejestruj się".<br />
+    9.Uwierzytelnienie konta uzupełniając Captchę.<br />
+    10.Nieuzupełnienie pola "Kod weryfikacji".<br />
+    <br />
+    Oczekiwany rezultat:<br />
+    - Przycisk "Dalej" jest nieaktywny, uniemożliwia kontynuację bez podania
+    pełnych danych.<br />
+    <br />
+    <li>dsds</li>
+    Kroki:<br />
+    Wybranie opcji Utwórz Konto.<br />
+    Poprawne uzupełnienie pola Imię.<br />
+    Podanie adresu e-mail w prawidłowym formacie.<br />
+    Podanie daty urodzenia.<br />
+    Przejście dalej używając przycisku "Dalej".<br />
+    Dostosowanie platformy do swoich potrzeb, zaznaczenie odpowiadających
+    checkboxów i zatwierdzenie przyciskiem "Dalej".<br />
+    Potwierdzenie uzupełnionych wcześniej danych i zatwierdzenie przyciskiem
+    "Zarejestruj się".<br />
+    Uwierzytelnienie konta uzupełniając trzykrotnie Captchę/zadanie
+    uwierzytelniające.<br />
+    Podanie błędnego kodu weryfikacji.<br />
+    <br />
+    Oczekiwany rezultat:<br />
+    - Sprawdzenie kodu, wyświetlenie komunikatu "Wpisany kod jest niepoprawny.
+    Spróbuj ponownie." i powrót do punktu 10, prosząc o podanie kodu
+    weryfikacji.<br />
+    <br />
+    <li></li>
+    Kroki:<br />
+    Użycie opcji "X" w lewym górnym rogu okienka rejestracji w dowolnym jej
+    momencie.<br />
+    <br />
+    Oczekiwany rezultat:<br />
+    - Okno rejestracji zamyka się, usuwając uprzednio wprowadzone dane.<br />
+    <br />
+  </ol>
+</ol>
